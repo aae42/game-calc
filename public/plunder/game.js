@@ -2,10 +2,6 @@ function random_element_from(array) {
   const random = Math.floor(Math.random() * array.length);
   return array[random];
 }
-const months = ["January", "February", "March", "April", "May", "June", "July"];
-
-const random = Math.floor(Math.random() * months.length);
-console.log(random, months[random]);
 
 function spin() {
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];

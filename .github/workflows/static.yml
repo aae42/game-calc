@@ -22,6 +22,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install devbox
+        uses: jetify-com/devbox-install-action@v0.11.0
+      - name: Run tests
+        run: devbox run -- just test
   # Single deploy job since we're just deploying
   deploy:
     environment:

@@ -3,12 +3,16 @@ function random_element_from(array) {
   return array[random];
 }
 
-function spin() {
-  const numbers = Array.from({ length: 19 }, (v, k) => k + 1);
+export function getRandomCoords() {
+  const numbers = Array.from({ length: 18 }, (v, k) => k + 1);
   const letters = [...'ABCDEFGHIJKL'];
-  const number = random_element_from(numbers);
-  const letter = random_element_from(letters);
-  document.getElementById("spin-output").innerHTML = letter + " / " + number;
+  return {
+    letter: random_element_from(letters),
+    number: random_element_from(numbers),
+  };
 }
 
-spin();
+export function spin() {
+  const coords = getRandomCoords();
+  document.getElementById("spinOutput").innerHTML = coords.letter + " / " + coords.number;
+}

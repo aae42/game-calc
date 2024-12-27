@@ -2,6 +2,13 @@
 default:
   just --list
 
+# run tests
+test: test-unit
+
+# run unit tests
+test-unit:
+  bun test
+
 # serve the page locally
 serve:
   @echo "Serving on http://localhost:8080 ..."

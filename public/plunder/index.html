@@ -20,8 +20,8 @@
   <main>
     <table>
       <tr>
-        <td><button onclick="spin()">Spin</button></td>
-        <td><code id="spin-output"></code></td>
+        <td style="width:8ch"><code id="spinOutput"></code></td>
+        <td><button id="spinButton">Spin</button></td>
       </tr>
     </table>
   </main>
@@ -29,7 +29,12 @@
   <footer>
     <p>plunder</p>
   </footer>
-  <script src="game.js"></script>
 </body>
+
+<script type="module">
+  import { spin } from './game.js'
+  spin();
+  document.getElementById('spinButton').onclick = spin;
+</script>
 
 </html>

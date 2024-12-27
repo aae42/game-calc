@@ -1,0 +1,10 @@
+":8080" {
+	handle_path "/game-calc/*" {
+		file_server {
+			root "public/"
+        }
+    }
+    handle {
+        redir * "/game-calc/"
+    }
+}

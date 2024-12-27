@@ -12,7 +12,7 @@ test-unit:
 # serve the page locally
 serve:
   @echo "Serving on http://localhost:8080 ..."
-  caddy file-server --root public/ --listen :8080
+  caddy run --config test/Caddyfile --watch
 
 # download simple css
 download-css:

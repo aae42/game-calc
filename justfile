@@ -14,6 +14,9 @@ serve:
   @echo "Serving on http://localhost:8080 ..."
   caddy run --config test/Caddyfile --watch
 
-# download simple css
-download-css:
-  curl --output public/css/simple.min.css --create-dirs https://cdn.simplecss.org/simple.min.css
+# update css dependencies
+update-dependencies:
+  mkdir -p public/css
+  curl "https://github.com/picocss/pico/archive/refs/heads/main.zip" --location -o public/css/pico.zip
+  unzip -j -o public/css/pico.zip pico-main/css/pico.min.css -d public/css/
+  rm public/css/pico.zip

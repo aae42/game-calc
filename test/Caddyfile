@@ -1,10 +1,17 @@
+{
+	log {
+		output stderr
+		level ERROR
+    }
+}
+
 ":8080" {
 	handle_path "/game-calc/*" {
 		file_server {
 			root "public/"
         }
     }
-    handle {
+	handle {
         redir * "/game-calc/"
     }
 }

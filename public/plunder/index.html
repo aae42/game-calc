@@ -1,40 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>game-calc - plunder</title>
-  <link rel="stylesheet" href="../css/simple.min.css">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-</head>
-
-<body>
-  <header>
-    <h1>plunder</h1>
-    <nav>
-      <a href="../">Home</a>
-    </nav>
-  </header>
-
-  <main>
-    <table>
-      <tr>
-        <td style="width:8ch"><code id="spinOutput"></code></td>
-        <td><button id="spinButton">Spin</button></td>
-      </tr>
-    </table>
-  </main>
-
-  <footer>
-    <p>plunder</p>
-  </footer>
-</body>
-
-<script type="module">
-  import { spin } from './game.js'
-  spin();
-  document.getElementById('spinButton').onclick = spin;
-</script>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../css/pico.min.css">
+    <title>game-calc</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><strong>game-calc</strong></li>
+        </ul>
+        <ul>
+          <li><a href="/">home</a></li>
+          <li>
+            <details class="dropdown">
+              <summary>plunder</summary>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h1>plunder</h1>
+      <article>
+        <header style="text-align: center;">Spinner</header>
+        <h1 style="text-align: center; font-family: monospace;"><span id="spinOutput">⦻ / ⦻</span></h1>
+        <button id="spinButton" style="width:100%">Spin</button>
+      </article>
+    </main>
+  </body>
+  <script type="module">
+    import { spin } from './game.js'
+    document.getElementById('spinButton').onclick = spin;
+  </script>
 </html>

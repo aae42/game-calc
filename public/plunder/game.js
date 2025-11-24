@@ -4,8 +4,8 @@ function random_element_from(array) {
 }
 
 export function getRandomCoords() {
-  const numbers = Array.from({ length: 18 }, (v, k) => k + 1);
-  const letters = [...'ABCDEFGHIJKL'];
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  const letters = 'ABCDEFGHIJKL'.split('');
   return {
     letter: random_element_from(letters),
     number: random_element_from(numbers),

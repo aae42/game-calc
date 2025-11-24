@@ -14,5 +14,5 @@ export function getRandomCoords() {
 
 export function spin() {
   const coords = getRandomCoords();
-  document.getElementById("spinOutput").innerHTML = coords.letter + " / " + coords.number;
+  document.getElementById("spinOutput").innerHTML = coords.letter + " • " + coords.number;
 }
